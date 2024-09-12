@@ -1,26 +1,27 @@
 'use client'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import { IoCloseOutline } from "react-icons/io5";
+
+import Link from "next/link"
+import { useState } from "react";
+/* icons */
 import { FaBars } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+/* animation librarys  */
+import { motion } from "framer-motion";
+
 
 const Navbar = () => {
-
-    /* Menu state */
-    const [activeMenu, setActiveMenu]= useState(false)
-
-    /* Menu links */
-    const navLinks=[
-        {title:'About', path:'#About'},
-        {title:'Contact', path:'#Contac'},
+    /* states */
+    const [activeMenu, setActiveMenu]=useState(false)
+    /* nav links */
+    const navLinks =[
+        {title: 'About', path:'#About'},
+        {title: 'Portafolios', path:'#Portafolios'},
     ]
-
-    /* toggle menu */
+    /* menu toogle */
     const toggleMenu = ()=>{
         setActiveMenu(!activeMenu)
     }
-    /* menu motion */
+    /* Menu animation */
     const menuVariants = {
         open:{
             x:0,
@@ -29,42 +30,40 @@ const Navbar = () => {
             }
         },
         close:{
-            x:'-100%',
+            x:'-200%',
             transition:{
                 duration:0.5
             }
         }
+        
     }
   return (
     <>
     <div className="w-full">
+        <div className="flex items-center justify-center py-4">
             {/* mobile */}
-        <motion.div 
-            initial={false}
-            animate={activeMenu ? 'open':'close'}
-            variants={menuVariants}
-            className="flex justify-center items-center py-4 md:hidden">
-            <ul className='flex items-center justify-center'>
+            <motion.ul 
+                initial={false}
+                animate={activeMenu ? 'close':'open'}
+                variants={menuVariants}
+                className="flex items-center justify-center md:hidden">
                 {navLinks.map((link, id)=>(
-                    <li key={id} className='text-white mx-4'>
+                    <li key={id} className="mx-2 text-white">
+                        <Link href={link.path}>{link.title}</Link>
+                    </li>
+                ))}
+            </motion.ul>
+            {/* desctok */}
+            <ul className="hidden md:flex items-center justify-center">
+                {navLinks.map((link, id)=>(
+                    <li key={id} className="mx-2 text-white">
                         <Link href={link.path}>{link.title}</Link>
                     </li>
                 ))}
             </ul>
-        </motion.div>
-        {/* destock */}
-        <div className="hidden md:flex justify-center items-center py-4">
-            <ul className='flex items-center justify-center'>
-                {navLinks.map((link, id)=>(
-                    <li key={id} className='text-white mx-4'>
-                        <Link href={link.path}>{link.title}</Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
-
-        <div className="text-white absolute top-0 right-0 m-4 md:hidden" onClick={()=>toggleMenu()}>
-            {activeMenu ? <IoCloseOutline size={30}/>: <FaBars size={30}/>}
+        <div className="absolute top-0 right-0 m-4 cursor-pointer md:hidden" onClick={()=>toggleMenu()}>
+            {activeMenu ? <FaBars size={30} color="white"/> :   <IoClose size={30} color="white"/>}
+         </div>
         </div>
     </div>
     </>
