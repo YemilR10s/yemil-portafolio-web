@@ -3,3 +3,35 @@
 @tailwind utilities;
 
 
+
+@keyframes animation {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+.animation-gradient{
+    animation: animation 5s ease infinite;
+    background-size: 200% 200%
+}
+
+@keyframes gradient-xy {
+    0% {
+      
+    }
+    50% {
+      scale: 2;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+  }
+  
+  .animate-gradient-xy {
+    animation: gradient-xy 3s ease infinite;
+  }
+  
