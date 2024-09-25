@@ -53,7 +53,7 @@ const projects = [
 
 const PortafolioComponent = () => {
   return (
-        <div className="bg-gradient-to-b from-black to-[#381a5f] py-16">
+        <div className="bg-gradient-to-b from-black to-[#381a5f] py-16 px-4">
             <div className="text-white space-y-24 flex flex-col items-center justify-center">
                 {projects.map((project, index)=>(
                     <motion.div 
@@ -61,7 +61,7 @@ const PortafolioComponent = () => {
                     whileInView={{opacity:1 ,y:0}}
                     transition={{duration: 0.5, delay: 0.25}}
                     viewport={{once: true}}
-                    className={`flex ${index % 2===1 ? "flex flex-col-reverse md:flex-row-reverse gap-12":"flex-col md:flex-row"}`} 
+                    className={`flex flex-col ${index % 2===1 ? "lg:flex-row-reverse gap-12":"lg:flex-row"}`} 
                     key={index}>
                         <div className="flex flex-col gap-4 px-8">
                             <h2 className='text-8xl text-white/70'>{`0${index + 1}`}</h2>
@@ -74,8 +74,8 @@ const PortafolioComponent = () => {
                             </div>
 
                         </div>
-                        <div className="">
-                            <Image alt={project.Title} src={project.src} className='w-[600px] h-[350px] object-cover border border-white/20'/>
+                        <div className="flex items-center justify-center mt-8">
+                            <Image alt={project.Title} src={project.src} className='max-w-[300px] md:max-w-[600px] object-cover border border-white/20'/>
                         </div>
                     </motion.div>
                 ))}

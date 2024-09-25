@@ -8,42 +8,42 @@ import Image from 'next/image'
 const About = () => {
   return (
     <>
-      <div className="h-[100vh] flex items-center justify-center bg-[linear-gradient(to_bottom,#DBAF6E,#2B1942_80%,#000_90%)]">
-        <div className="max-w-[1200px] grid grid-cols-8 gap-6">
+      <div className="flex items-center justify-center bg-[linear-gradient(to_bottom,#DBAF6E,#2B1942_80%,#000_90%)]">
+        <div className="max-w-[1200px] grid md:grid-cols-8 gap-6 p-4">
 
-          <div className="flex p-6 col-span-5 bg-white/10 rounded-lg border border-white/20 relative">
-            <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient"></div>
-            <Image alt='' src={book} className='w-[150px] h-[150px]'/>
+          <div className="flex flex-col p-6 bg-white/10 rounded-xl border border-white/20 relative md:col-span-5 lg:flex-row">
+            <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient rounded-xl"></div>
+            <Image alt='' src={book} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
               <h2 className='text-xl text-white/80 font-bold'>Book Store</h2>
-              <p className='text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quis nostrum recusandae est molestias consequatur quae aliquid corrupti liber</p>
+              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quis nostrum recusandae est molestias consequatur quae aliquid corrupti liber</p>
             </div>
           </div>
 
-          <div className="flex p-6 col-span-3 bg-white/10 rounded-lg border border-white/20 relative">
+          <div className="flex flex-col p-6 bg-white/10 rounded-lg border border-white/20 relative md:col-span-3 lg:flex-row ">
             <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient"></div>
-            <Image alt='' src={card} className='w-[150px] h-[150px]'/>
+            <Image alt='' src={card} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
               <h2 className='text-xl text-white/80 font-bold'>Card Store</h2>
-              <p className='text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </div>
           </div>
 
-          <div className="flex p-6 col-span-3 bg-white/10 rounded-lg border border-white/20 relative">
+          <div className="flex flex-col p-6 bg-white/10 rounded-lg border border-white/20 relative md:col-span-3 lg:flex-row">
             <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient"></div>
-            <Image alt='' src={finance} className='w-[150px] h-[150px]'/>
+            <Image alt='' src={finance} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
               <h2 className='text-xl text-white/80 font-bold'>Finance Store</h2>
-              <p className='text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             </div>
           </div>
 
-          <div className="flex p-6 col-span-5 bg-white/10 rounded-lg border border-white/20  relative">
+          <div className="flex  flex-col p-6  bg-white/10 rounded-lg border border-white/20  relative md:col-span-5 lg:flex-row">
             <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient"></div>
-            <Image alt='' src={pc} className='w-[150px] h-[150px]'/>
+            <Image alt='' src={pc} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
               <h2 className='text-xl text-white/80 font-bold'>Computer Store</h2>
-              <p className='text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quis nostrum recusandae est molestias consequatur quae aliquid corrupti liber</p>
+              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quis nostrum recusandae est molestias</p>
             </div>
           </div>
 

@@ -12,11 +12,11 @@ const Skills = () => {
     ]
   return (
     <div className='py-20 bg-gradient-to-b from-[#381a5f] to-black '>
-        <div className="flex items-center justify-center flex-row gap-8">
+        <div className="flex flex-col items-center justify-center md:flex-row gap-8">
             {Skills.map((skill, index)=>(
-                <div className="bg-white/20 p-6 flex flex-col items-center justify-center rounded-md text-white w-[200px] " key={index}>
-                    <div className="text-6xl">{skill.icon}</div>
-                    <h3>{skill.title}</h3>
+                <div className="bg-white/20 hover:bg-white/40 p-6 flex flex-col items-center justify-center rounded-md  w-[200px] " key={index}>
+                    <div className="text-6xl text-white/80">{skill.icon}</div>
+                    <h3 className='text-white'>{skill.title}</h3>
                 </div>
             ))}
         </div>
