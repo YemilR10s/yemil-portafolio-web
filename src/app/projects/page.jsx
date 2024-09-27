@@ -71,7 +71,7 @@ const Portfolio = () => {
               </div>
               <div className="mt-4 border-t pt-4">
                 <blockquote className="text-gray-500 italic">
-                  "{project.testimonial}"
+                  {project.testimonial}
                 </blockquote>
                 <p className="mt-2 text-sm font-bold text-gray-700">— {project.clientName}</p>
               </div>
