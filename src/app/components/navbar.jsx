@@ -11,11 +11,11 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
     /* states */
-    const [activeMenu, setActiveMenu]=useState(false)
+    const [activeMenu, setActiveMenu]=useState(true)
     /* nav links */
     const navLinks =[
-        {title: 'About', path:'#About'},
-        {title: 'Portafolios', path:'#Portafolios'},
+        {title: 'Sobre mi', path:'/sobreMi'},
+        {title: 'Portafolios', path:'/projects'},
     ]
     /* menu toogle */
     const toggleMenu = ()=>{
@@ -30,7 +30,7 @@ const Navbar = () => {
             }
         },
         close:{
-            x:'-200%',
+            x:'-500%',
             transition:{
                 duration:0.5
             }
@@ -39,9 +39,12 @@ const Navbar = () => {
     }
   return (
     <>
-    <div className="w-full">
-        <div className="flex items-center justify-center py-4">
+    <div className="w-full bg-black">
+        <div className="flex items-center justify-around py-4">
             {/* mobile */}
+            <Link href='/'>
+                <span className="text-white/70 text-xl font-bold">Miguel <span className="text-[#E48A57] font-bold">.</span></span>
+            </Link>
             <motion.ul 
                 initial={false}
                 animate={activeMenu ? 'close':'open'}
@@ -56,7 +59,7 @@ const Navbar = () => {
             {/* desctok */}
             <ul className="hidden md:flex items-center justify-center">
                 {navLinks.map((link, id)=>(
-                    <li key={id} className="mx-2 text-white">
+                    <li key={id} className="mx-2 text-white/70 text-xl">
                         <Link href={link.path}>{link.title}</Link>
                     </li>
                 ))}

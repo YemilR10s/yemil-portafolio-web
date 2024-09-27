@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import WhatsAppLive from "./components/WhatsAppLive";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +26,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar/>
+        <div className="relative">
         {children}
+        <div className="fixed right-10 top-[600px] z-10 ">
+          <WhatsAppLive/>
+        </div>
+        </div>
+        <Footer/>
       </body>
     </html>
   );

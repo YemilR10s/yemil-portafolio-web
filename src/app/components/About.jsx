@@ -1,49 +1,50 @@
  import React from 'react'
-import book from '../assets/book.png'
-import card from '../assets/card.png'
-import finance from '../assets/finance.png'
-import pc from '../assets/pc.png'
+import enfoque from '../assets/enfoque.png'
+import monitor from '../assets/monitor.png'
+import promocion from '../assets/promocion.png'
+import solucionDeProblemas from '../assets/resolucion-de-problemas.png'
 import Image from 'next/image'
 
 const About = () => {
   return (
     <>
-      <div className="flex items-center justify-center bg-[linear-gradient(to_bottom,#DBAF6E,#2B1942_80%,#000_90%)]">
+      <div className="flex flex-col items-center justify-center bg-[linear-gradient(to_bottom,#DBAF6E,#2B1942_80%,#000_90%)]">
+          <h2 className='text-4xl text-white/50 font-bold mb-10 text-center'>¿Por qué trabajar conmigo?</h2>
         <div className="max-w-[1200px] grid md:grid-cols-8 gap-6 p-4">
 
           <div className="flex flex-col p-6 bg-white/10 rounded-xl border border-white/20 relative md:col-span-5 lg:flex-row">
             <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient rounded-xl"></div>
-            <Image alt='' src={book} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
+            <Image alt='' src={solucionDeProblemas} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
-              <h2 className='text-xl text-white/80 font-bold'>Book Store</h2>
-              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quis nostrum recusandae est molestias consequatur quae aliquid corrupti liber</p>
+              <h2 className='text-xl text-white/80 font-bold'>Experto en Soluciones Personalizadas</h2>
+              <p className='text-sm  text-white/80 font-bold mt-4'>Cada negocio es único, y cada sitio web que creo también. Obtendrás una solución personalizada que refleja tu marca</p>
             </div>
           </div>
 
           <div className="flex flex-col p-6 bg-white/10 rounded-lg border border-white/20 relative md:col-span-3 lg:flex-row ">
             <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient"></div>
-            <Image alt='' src={card} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
+            <Image alt='' src={enfoque} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
-              <h2 className='text-xl text-white/80 font-bold'>Card Store</h2>
-              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <h2 className='text-xl text-white/80 font-bold'>Enfoque en Resultados</h2>
+              <p className='text-sm  text-white/80 font-bold mt-4'>Mi objetivo es ayudarte a crecer, ya sea con más tráfico, o mayores conversiones.</p>
             </div>
           </div>
 
           <div className="flex flex-col p-6 bg-white/10 rounded-lg border border-white/20 relative md:col-span-3 lg:flex-row">
             <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient"></div>
-            <Image alt='' src={finance} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
+            <Image alt='' src={monitor} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
-              <h2 className='text-xl text-white/80 font-bold'>Finance Store</h2>
-              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <h2 className='text-xl text-white/80 font-bold'>Fiable y Transparente</h2>
+              <p className='text-sm text-white/80 font-bold mt-4'>Comunicación clara y plazos de proyecto para asegurar que el trabajo se realice correctamente.</p>
             </div>
           </div>
 
           <div className="flex  flex-col p-6  bg-white/10 rounded-lg border border-white/20  relative md:col-span-5 lg:flex-row">
             <div className="absolute bg-gradient-to-r from-orange-500 via-purple-700 to-black inset-0 opacity-30 animation-gradient"></div>
-            <Image alt='' src={pc} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
+            <Image alt='' src={promocion} className='w-[100px] h-[100px] md:w-[150px] md:h-[150px]'/>
             <div className="flex flex-col p-4 mt-4">
-              <h2 className='text-xl text-white/80 font-bold'>Computer Store</h2>
-              <p className='text-sm md:text-xl text-white/80 font-bold mt-4'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam quis nostrum recusandae est molestias</p>
+              <h2 className='text-xl text-white/80 font-bold'>Comprometido con tu Éxito</h2>
+              <p className='text-sm text-white/80 font-bold mt-4'>Estoy aquí para ayudarte en cada paso del proceso, asegurándome de que tus necesidades sean escuchadas y atendidas.</p>
             </div>
           </div>
 
@@ -54,66 +55,3 @@ const About = () => {
 }
 
 export default About 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <div className="h-[100vh] bg-[linear-gradient(to_bottom,#DBAF6E,#2B1942_80%,#000_90%)]">
-<div className="max-w-[1200px] mx-auto grid grid-cols-8 gap-8 place-items-center">
-  <div className="w-full col-span-5 bg-white/10 rounded-xl border border-white/20 relative">
-   <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradiant-xy"></div>
-    <div className="flex flex-row p-6">
-      <Image alt='' src={book} className='w-auto h-[130px]'/>
-      <div className="flex flex-col mt-4">
-        <h2 className='text-2xl font-bold text-white/80'>Education</h2>
-        <p className='text-lg text-white/70 mt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi neque ea ex quaerat sit, voluptatem accusantium iste veniam? Dolores, inventore aliquam placeat</p>
-      </div>
-    </div>
-  </div>
-
-  <div className="w-full col-span-3 bg-white/10 rounded-xl border border-white/20 relative">
-    <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradiant-xy"></div>
-    <div className="flex flex-row p-6">
-      <Image alt='' src={card} className='w-auto h-[130px]'/>
-      <div className="flex flex-col mt-4">
-        <h2 className='text-2xl font-bold text-white/80'>Experience</h2>
-        <p className='text-lg text-white/70 mt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus hic maiores </p>
-      </div>
-    </div>
-  </div>
-
-  <div className="w-full col-span-3 bg-white/10 rounded-xl border border-white/20 relative ">
-  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradiant-xy"></div>
-    <div className="flex flex-row p-6">
-      <Image alt='' src={finance} className='w-auto h-[130px]'/>
-      <div className="flex flex-col mt-4">
-        <h2 className='text-2xl font-bold text-white/80'>Problem-solving</h2>
-        <p className='text-lg text-white/70 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perspiciatis</p>
-      </div>
-    </div>
-  </div>
-
-  <div className="w-full col-span-5 bg-white/10 rounded-xl border border-white/20 relative">
-  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-purple-700 to-orange-800 opacity-30 animate-gradiant-xy"></div>
-    <div className="flex flex-row p-6">
-      <Image alt='' src={pc} className='w-auto h-[130px]'/>
-      <div className="flex flex-col mt-4">
-        <h2 className='text-2xl font-bold text-white/80'>Technical Skills</h2>
-        <p className='text-lg text-white/70 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsum officia, harum fugiat officiis soluta, commodi dolores alias beatae maiores</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div> */}

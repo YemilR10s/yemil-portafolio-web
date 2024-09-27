@@ -3,7 +3,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import PortafolioComponent from "./components/Portafolio";
-import Skills from "./components/Skills";
+import Services from "./components/Services";
 
 export default function Home() {
 
@@ -12,9 +12,8 @@ export default function Home() {
       <Hero/>
       <About/>
       <PortafolioComponent/>
-      <Skills/>
+      <Services/>
       <Contact/>
-      <Footer/>
     </div>
   );
 }
