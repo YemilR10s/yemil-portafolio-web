@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="flex items-center justify-around py-4">
             {/* mobile */}
             <Link href='/'>
-                <span className="text-white/70 text-xl font-bold">Miguel <span className="text-[#E48A57] font-bold">.</span></span>
+                <span className="text-white/70 text-xl font-bold">Yemil <span className="text-[#E48A57] font-bold">.</span></span>
             </Link>
             <motion.ul 
                 initial={false}
